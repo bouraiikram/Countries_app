@@ -7,9 +7,6 @@ Application Django permettant d’importer des données depuis l’API **REST Co
 
 ---
 
-## Architecture globale
-
-API REST Countries → Commande Django (import) → Base de données SQLite → Interface web Django → Statistiques métier
 
 ## Installations 
 ### Prérequis

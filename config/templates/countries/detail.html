@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ country.name }}</title>
+</head>
+<body>
+
+<a href="{% url 'country_list' %}">⬅ Retour à la liste</a>
+
+<h1>{{ country.name }}</h1>
+
+<ul>
+    <li><strong>Capitale :</strong> {{ country.capital }}</li>
+    <li><strong>Région :</strong> {{ country.region }}</li>
+    <li><strong>Sous-région :</strong> {{ country.subregion }}</li>
+    <li><strong>Population :</strong> {{ country.population }}</li>
+    <li><strong>Superficie :</strong> {{ country.area }} km²</li>
+</ul>
+
+{% if country.flag_url %}
+    <img src="{{ country.flag_url }}" width="160" alt="Flag of {{ country.name }}">
+{% endif %}
+
+</body>
+</html>

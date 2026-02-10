@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques des pays</title>
+</head>
+<body>
+
+<h1>Statistiques des pays</h1>
+
+<p><strong>Nombre total de pays :</strong> {{ total }}</p>
+
+<hr>
+
+<h2>Top 10 des pays par population</h2>
+<ul>
+    {% for country in top_population %}
+        <li>{{ country.name }} — {{ country.population }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>Top 10 des pays par superficie</h2>
+<ul>
+    {% for country in top_area %}
+        <li>{{ country.name }} — {{ country.area }} km²</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>📌 Répartition par région</h2>
+<ul>
+    {% for item in by_region %}
+        <li>{{ item.region }} : {{ item.total }}</li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<a href="/countries/">⬅ Retour à la liste des pays</a>
+
+</body>
+</html>

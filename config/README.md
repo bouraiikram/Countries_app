@@ -82,14 +82,14 @@ docker run -d -p 8000:8000 --name countries countries-app
 ```
 ### Initialisation de la base et import
 ```bash
-python manage.py makemigrations 
+docker exec -it countries python manage.py makemigrations 
 docker exec -it countries python manage.py migrate
 docker exec -it countries python manage.py import_countries
 ```
 
 ### Accès à l'application
 ```bash
-http://127.0.0.1:8000 
+http://127.0.0.1:8000/countries
 ```
 
 

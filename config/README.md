@@ -39,6 +39,13 @@ venv\Scripts\activate
 pip install django requests
 
 ```
+
+### Création du projet Django
+```bash
+django-admin startproject configprojet .
+
+```
+
 ![ENV](images/3.png)
 
 ### Initialisation de la base de données
